@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ManageInventory = () => {
-    const {inventoryId} =useParams();
+    
+    
     const [products, setProducts] = useState([]);
     useEffect(() => {
       fetch("http://localhost:5000/product")
@@ -14,12 +15,13 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${inventoryId}`;
+            const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
+                    console.log(data)
                    if(data.deleteCount>0){
                     const remaining = products.filter(product => product._id !== id);
                     setProducts(remaining);
@@ -28,6 +30,7 @@ const ManageInventory = () => {
                    
                 })
         }
+        
     }
     return (
         <div className='manage-section'>
@@ -56,6 +59,9 @@ const ManageInventory = () => {
                 }
             </tbody>
         </Table>
+        <Link to="/additeml">
+        <button className="btn btn-primary w-50">ADD Item</button>
+      </Link>
         
     </div >
 );
