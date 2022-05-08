@@ -5,13 +5,28 @@ const AddItem = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+  
+  
   } = useForm();
+  const onSubmit = data => {
+    console.log(data);
+    const url = "http://localhost:5000/product";
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res=> res.json())
+    .then(result =>{
+        console.log(result);
+    } )
+};
   return (
     <div className="w-50 mx-auto">
       <h2>Please add new Laptop</h2>
-      <form className="d-flex flex-column" onSubmit={handleSubmit(onsubmit)}>
+      <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="mb-2"
           placeholder="Name"
@@ -37,7 +52,7 @@ const AddItem = () => {
         <input
           className="mb-2"
           placeholder="Supplier"
-          type="number"
+          type="text"
           {...register("Supplier")}
         />
         <input
@@ -46,7 +61,7 @@ const AddItem = () => {
           type="text"
           {...register("img")}
         />
-        <input className="btn btn-primary" type="submit" value="Add Service" />
+        <input className="btn btn-primary" type="submit" value="Add Laptop" />
       </form>
     </div>
   );
