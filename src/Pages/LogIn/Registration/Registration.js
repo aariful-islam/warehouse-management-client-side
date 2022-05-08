@@ -40,7 +40,7 @@ const Registration = () => {
 
   return (
     <div
-      style={{ border: "1px solid black", height: "650px" }}
+      style={{ border: "1px solid black", height: "75" }}
       className="bg-primary w-50 mx-auto mt-5 d-flex align-items-center"
     >
       <Form

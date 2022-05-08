@@ -91,7 +91,7 @@ const LogIn = () => {
           </Form.Group>
 
           <p>
-            New to Workout with arif?{" "}
+            New to laptop warehouse?{" "}
             <Link to="/registration" className="text-decoration-none">please register</Link>{" "}
           </p>
 
