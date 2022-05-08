@@ -21,36 +21,25 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="fw-bold" href="home#services">
-                Services
-              </Nav.Link>
-              <Nav.Link className="fw-bold " >
-                Blogs
-              </Nav.Link>
-              <Nav.Link className="fw-bold " >
-                About Me
-              </Nav.Link>
-              <Nav.Link className="fw-bold " >
-                Check Out
-              </Nav.Link>
+              
+              <Nav.Link className="fw-bold ">Blogs</Nav.Link>
+              <Nav.Link className="fw-bold ">About Me</Nav.Link>
+              <Nav.Link className="fw-bold ">Check Out</Nav.Link>
             </Nav>
             <Nav>
-            <Nav.Link className="fw-bold " a>
-                Contact Me
-              </Nav.Link>
-              {user 
-              ? 
-              (
-                <button
-                  className="btn btn-link text-decoration-none fw-bold"
-                  onClick={handleSignOut}
-                >
-                  sign out
-                </button>
-              ) 
-              : 
-              (
-                <Nav.Link as={Link} to="/login" className="fw-bold" >
+              {user ? (
+                <div className="d-flex">
+                  <Nav.Link className="fw-bold " as={Link} to="/additem">ADD Items</Nav.Link>
+                  <Nav.Link className="fw-bold " >My items</Nav.Link>
+                  <button
+                    className="btn btn-link text-decoration-none fw-bold"
+                    onClick={handleSignOut}
+                  >
+                    sign out
+                  </button>
+                </div>
+              ) : (
+                <Nav.Link as={Link} to="/login" className="fw-bold">
                   Login
                 </Nav.Link>
               )}
