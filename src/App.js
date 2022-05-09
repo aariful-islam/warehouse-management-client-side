@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItem from './Pages/AddItem/AddItem';
+import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import Products from './Pages/Home/Products/Products/Products';
 import Inventory from './Pages/Inventory/Inventory';
@@ -56,6 +57,7 @@ function App() {
         
         }></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
