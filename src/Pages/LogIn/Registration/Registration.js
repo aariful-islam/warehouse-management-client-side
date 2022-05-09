@@ -41,11 +41,11 @@ const Registration = () => {
   return (
     <div
       style={{ border: "1px solid black", height: "75" }}
-      className="bg-primary w-50 mx-auto mt-5 d-flex align-items-center"
+      className="bg-primary w-100 mx-auto mt-5 d-flex align-items-center"
     >
       <Form
         onSubmit={handleFormSubmit}
-        className="w-50 mx-auto bg-white p-4 mt-5 mb-3 shadow-lg p-3 mb-5 bg-white rounded"
+        className="w-75 mx-auto bg-white p-4 mt-5 mb-3 shadow-lg p-3 mb-5 bg-white rounded"
         style={{ borderRadius: "10px" }}
       >
         <Form.Group className="mb-3" controlId="formBasicText">

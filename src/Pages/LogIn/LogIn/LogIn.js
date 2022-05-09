@@ -64,11 +64,11 @@ const LogIn = () => {
     <div>
       <div
         style={{ border: "1px solid black", height: "75vh" }}
-        className="bg-primary w-50 mx-auto mt-5 "
+        className="bg-primary w-100 mx-auto mt-5 "
       >
         <Form
           onSubmit={handleForm}
-          className="w-50 mx-auto bg-white p-4 mt-5 shadow-lg p-3 mb-5 bg-white rounded"
+          className="w-75 mx-auto bg-white p-4 mt-5 shadow-lg p-3 mb-5 bg-white rounded"
           style={{ borderRadius: "10px" }}
         >
           <Form.Group className="mb-3" controlId="formBasicEmail">
