@@ -11,6 +11,7 @@ import LogIn from './Pages/LogIn/LogIn/LogIn';
 import Registration from './Pages/LogIn/Registration/Registration';
 import RequireAuth from './Pages/LogIn/RequireAuth/RequireAuth';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import ManageItems from './Pages/ManageItems/ManageItems';
 import MyItem from './Pages/MyItem/MyItem';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -56,6 +57,11 @@ function App() {
           </RequireAuth>
         
         }></Route>
+        <Route path='/manageitem' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
@@ -69,3 +75,4 @@ function App() {
 }
 
 export default App;
+
