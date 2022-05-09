@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddItem = () => {
   const {
@@ -21,6 +23,7 @@ const AddItem = () => {
     .then(res=> res.json())
     .then(result =>{
         console.log(result);
+        toast("Laptop Added");
     } )
 };
   return (

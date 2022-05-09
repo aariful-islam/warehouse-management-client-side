@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Button, Form, Toast} from "react-bootstrap";
+import { Button, Form, Toast} from "react-bootstrap"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import {
@@ -51,11 +53,11 @@ const LogIn = () => {
   const resetPassword = async () => {
       if ({email}) {
       await sendPasswordResetEmail(email);
-    //   Toast("Sent email");
+       toast("Sent email");
     } 
     else {
         console.log({email})
-    //   Toast("please enter your email");
+     toast("please enter your email");
     }
   };
   return (
@@ -109,7 +111,7 @@ const LogIn = () => {
             </button>{" "}
           </p>
         </Form>
-        {/* <ToastContainer /> */}
+        <ToastContainer />
       </div>
       <SocialLogin></SocialLogin>
     </div>
