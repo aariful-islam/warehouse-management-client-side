@@ -14,7 +14,8 @@ const Products = () => {
       <h1 className="mt-5 my-0 text-center">My Inventory</h1>
 
       <div className="services-container my-3">
-        {products.map((product) => <Product
+        {
+        products.map((product) => <Product
             key={product._id}
             product={product}
             >

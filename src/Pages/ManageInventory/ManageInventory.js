@@ -22,11 +22,11 @@ const ManageInventory = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-                   if(data.deleteCount>0){
+                 
                     const remaining = products.filter(product => product._id !== id);
                     setProducts(remaining);
 
-                   }
+                   
                    
                 })
         }
@@ -59,7 +59,7 @@ const ManageInventory = () => {
                 }
             </tbody>
         </Table>
-        <Link to="/additeml">
+        <Link to="/additem">
         <button className="btn btn-primary w-50">ADD Item</button>
       </Link>
         

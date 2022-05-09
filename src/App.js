@@ -9,6 +9,7 @@ import LogIn from './Pages/LogIn/LogIn/LogIn';
 import Registration from './Pages/LogIn/Registration/Registration';
 import RequireAuth from './Pages/LogIn/RequireAuth/RequireAuth';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import MyItem from './Pages/MyItem/MyItem';
 import Header from './Pages/Shared/Header/Header';
 
 
@@ -31,6 +32,14 @@ function App() {
         <Route path='/additem' element={
           <RequireAuth>
             <AddItem></AddItem>
+          </RequireAuth>
+
+        }>
+
+        </Route>
+        <Route path='/myitem' element={
+          <RequireAuth>
+           <MyItem></MyItem>
           </RequireAuth>
 
         }>
