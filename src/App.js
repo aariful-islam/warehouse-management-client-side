@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItem from './Pages/AddItem/AddItem';
 import Blogs from './Pages/Blogs/Blogs';
+import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home/Home';
 import Products from './Pages/Home/Products/Products/Products';
 import Inventory from './Pages/Inventory/Inventory';
@@ -62,6 +63,7 @@ function App() {
             <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
