@@ -63,6 +63,7 @@ function App() {
             <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
+        
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>

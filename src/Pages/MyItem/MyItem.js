@@ -6,10 +6,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 const MyItem = () => {
     const [products,setProducts]= useState([]);
     const [user] = useAuthState(auth);
+    
     useEffect( ()=>{
         const getProducts=async()=>{
             const email=user.email;
-            const url =`http://localhost:5000/product?email=${email}`;
+            console.log(email)
+            const url =`https://hidden-fortress-18672.herokuapp.com/product?email=${email}`;
             const {data} = await axios.get(url);
             setProducts(data)
             

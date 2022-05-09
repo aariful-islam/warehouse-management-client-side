@@ -5,7 +5,7 @@ const Inventory = () => {
   const { inventoryId } = useParams();
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/product/${inventoryId}`;
+    const url = `https://hidden-fortress-18672.herokuapp.com/product/${inventoryId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
@@ -24,7 +24,7 @@ const Inventory = () => {
     const updatedQuantity = {total};
 
     // send data to the server
-    const url = `http://localhost:5000/product/${inventoryId}`;
+    const url = `https://hidden-fortress-18672.herokuapp.com/product/${inventoryId}`;
     fetch(url, {
         method: 'PUT',
         headers: {
@@ -51,7 +51,7 @@ const handleDelibered = () => {
 
 
     // send data to the server
-    const url = `http://localhost:5000/product/${inventoryId}`;
+    const url = `https://hidden-fortress-18672.herokuapp.com/product/${inventoryId}`;
     fetch(url, {
         method: 'PUT',
         headers: {

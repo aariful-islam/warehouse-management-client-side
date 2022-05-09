@@ -12,7 +12,7 @@ const AddItem = () => {
   } = useForm();
   const onSubmit = data => {
     console.log(data);
-    const url = "http://localhost:5000/product";
+    const url = "https://hidden-fortress-18672.herokuapp.com/product";
     fetch(url, {
         method: 'POST',
         headers: {
@@ -27,7 +27,7 @@ const AddItem = () => {
     } )
 };
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto m-5">
       <h2>Please add new Laptop</h2>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input
