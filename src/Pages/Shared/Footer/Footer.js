@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="col-md-6 mt-md-0 mt-3">
               <h5 className="text-uppercase">Laptop Warehouse</h5>
               <p>
-                Get the best and authentic laptop from us.
+                Get the best and authentic laptop from us. We suplly the best product all over bangladesh. we import our product from dubai.
               </p>
             </div>
 
